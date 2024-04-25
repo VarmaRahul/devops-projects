@@ -40,7 +40,7 @@ server {
 
         index index.html
 
-        server_name <domain_name>;
+        server_name <example.com> <www.example.com>;
 
         location / {
                 # First attempt to serve request as file, then
@@ -49,3 +49,6 @@ server {
         }
 }
 ```
+- Go to the Domain registrar, create an A record and add the Public IP as the value.
+- Create a CName record for subdomain www.example.com
+- Now you website is live on domain example.com
