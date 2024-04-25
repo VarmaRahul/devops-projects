@@ -100,5 +100,8 @@ EOF
 sudo nginx -t
 ```
 - Now restart the nginx service
+```
+sudo systemctl restart nginx
+```
 - Browse the website to see secured key in the header which shows "Connection is secure"
-- Now you website is live on domain example.com
+- Now you website is live on example.com
