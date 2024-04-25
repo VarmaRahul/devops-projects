@@ -28,7 +28,9 @@ chmod 666 hospital
 - Go to the nginx config file and setup routing for the hospital home page
 - The public ip should be redirected to the index page in the project folder
 ```
-vim /etc/nginx/sites-available/default
+cd /etc/nginx/sites-available/
+chmod 666 default
+vim default
 ```
 - Replace the file with the below content
 - The server will listen on port 80 on your domain
@@ -49,6 +51,10 @@ server {
                 try_files  / =404;
         }
 }
+```
+- restart the nginx service
+```
+sudo systemctl restart nginx
 ```
 - Go to the Domain registrar, create an A record and add the Public IP as the value.
 - Create a CName record for subdomain www.example.com
