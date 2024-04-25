@@ -58,4 +58,47 @@ sudo systemctl restart nginx
 ```
 - Go to the Domain registrar, create an A record and add the Public IP as the value.
 - Create a CName record for subdomain www.example.com
+- The website is now available online, it is still not secured
+
+  ### Configure SSL on the server
+- Download the SSL csr file and private key from the provider
+- Browse to location /etc/ssl
+- Combine the content of ca_bundle_file + crt file to create domain.crt file
+- Copy the private_key to create domain.key file
+
+- Make changes to the default file as below
+```
+cat >> default <<EOF
+
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name webdevman.me www.webdevman.me;
+
+    return 302 https://$server_name$request_uri;
+}
+
+
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    ssl_certificate /etc/ssl/webdevman_me.crt
+    ssl_certificate_key /etc/ssl/webdevman_me.key
+
+    server_name webdevman.me www.webdevman.me;
+
+    root /var/www/html/hospital;
+    index index.html index.htm index.nginx-debian.html;
+
+}
+
+EOF
+```
+- Check if there are any syntax errors in the config
+```
+sudo nginx -t
+```
+- Now restart the nginx service
+- Browse the website to see secured key in the header which shows "Connection is secure"
 - Now you website is live on domain example.com
