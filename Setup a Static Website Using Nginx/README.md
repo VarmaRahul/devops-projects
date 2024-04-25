@@ -23,6 +23,7 @@ sudo cat /var/www/html/index.nginx-debian.html
 cd /var/www/html
 git clone 
 mv Hospital-Management-Html hospital
+chmod 666 hospital
 ```
 - Go to the nginx config file and setup routing for the hospital home page
 - The public ip should be redirected to the index page in the project folder
