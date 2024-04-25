@@ -32,7 +32,7 @@ cd /etc/nginx/sites-available/
 chmod 666 default
 vim default
 ```
-- Replace the file with the below content
+- Replace the file with below content
 - The server will listen on port 80 on your domain
 ```
 server {
