@@ -1,5 +1,5 @@
 ### Prerequisites
-- Get a domain name from domain registrar and a SSL certificate
+- Get a domain name from domain registrar and SSL certificate from provider
 
 ### Setting up the server and installing Nginx
 - Start with launching a ubuntu machine with minimal config
