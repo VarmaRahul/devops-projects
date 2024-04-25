@@ -1,7 +1,7 @@
 ### Prerequisites
 - Get a domain name from domain registrar and a SSL certificate
 
-### Setting up the server
+### Setting up the server and installing Nginx
 - Start with launching a ubuntu machine with minimal config
 - Create a key-pair for ssh authentication
 - Enable port for ssh(22), http(80) and https(443) in the security group
