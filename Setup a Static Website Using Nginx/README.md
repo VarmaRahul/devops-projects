@@ -82,8 +82,8 @@ server {
 
 
 server {
-    listen 443 ssl;
-    listen [::]:443 ssl;
+	listen 443 ssl;
+	listen [::]:443 ssl;
     ssl_certificate /etc/ssl/example.crt
     ssl_certificate_key /etc/ssl/example.key
 
@@ -92,6 +92,11 @@ server {
     root /var/www/html/hospital;
     index index.html index.htm index.nginx-debian.html;
 
+    location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files  / =404;
+	}
 }
 
 EOF
