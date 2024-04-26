@@ -3,7 +3,6 @@
 ```
 sudo apt-get update && sudo apt-get -y upgrade
 sudo apt-get install nginx -y
-sudo apt-get install git -y
 ```
 - Change the file /etc/nginx/sites-available/default with the below config
 - The proxy_pass is where the redirecting server name/IP needs to be specified
