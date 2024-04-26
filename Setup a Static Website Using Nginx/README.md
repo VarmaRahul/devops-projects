@@ -7,8 +7,7 @@
 - Enable port for ssh(22), http(80) and https(443) in the security group
 - Login to the machine via ssh using console/putty, update os and install nginx
 ```
-sudo apt-get update -y
-sudo apt-get upgrade -y
+sudo apt-get update && sudo apt-get -y upgrade
 sudo apt-get install nginx -y
 sudo apt-get install git -y
 ```
