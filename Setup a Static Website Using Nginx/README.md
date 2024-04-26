@@ -25,6 +25,7 @@ git clone https://github.com/VarmaRahul/Hospital-Management-Html.git
 mv Hospital-Management-Html hospital
 chmod 666 hospital
 ```
+
 ### Setting up Nginx for web routing
 - Go to the nginx config file and setup routing for the hospital home page
 - The public ip should be redirected to the index page in the project folder
