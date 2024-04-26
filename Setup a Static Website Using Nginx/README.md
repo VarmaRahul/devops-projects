@@ -75,7 +75,7 @@ server {
     listen 80;
     listen [::]:80;
 
-    server_name webdevman.me www.webdevman.me;
+    server_name example.com www.example.com;
 
     return 302 https://$server_name$request_uri;
 }
@@ -84,10 +84,10 @@ server {
 server {
     listen 443 ssl;
     listen [::]:443 ssl;
-    ssl_certificate /etc/ssl/webdevman_me.crt
-    ssl_certificate_key /etc/ssl/webdevman_me.key
+    ssl_certificate /etc/ssl/example.crt
+    ssl_certificate_key /etc/ssl/example.key
 
-    server_name webdevman.me www.webdevman.me;
+    server_name example.com www.example.com;
 
     root /var/www/html/hospital;
     index index.html index.htm index.nginx-debian.html;
