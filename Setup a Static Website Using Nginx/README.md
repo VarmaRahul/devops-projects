@@ -1,4 +1,4 @@
-### Prerequisites
+## Prerequisites
 - Get a domain name from domain registrar and SSL certificate from provider
 
 ### Setting up the server and installing Nginx
@@ -24,6 +24,7 @@ git clone https://github.com/VarmaRahul/Hospital-Management-Html.git
 mv Hospital-Management-Html hospital
 chmod 666 hospital
 ```
+### Setting up Nginx for web routing
 - Go to the nginx config file and setup routing for the hospital home page
 - The public ip should be redirected to the index page in the project folder
 ```
@@ -59,7 +60,7 @@ sudo systemctl restart nginx
 - Create a CName record for subdomain www.example.com
 - The website is now available online, it is still not secured
 
-  ### Configure SSL on the server
+### Configure SSL on the server
 - Download the SSL csr file and private key from the provider
 - Browse to location /etc/ssl
 - Combine the content of ca_bundle_file + crt file to create domain.crt file
