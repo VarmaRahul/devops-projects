@@ -111,3 +111,7 @@ sudo systemctl restart nginx
 ```
 - Browse the website to see secured key in the header which shows "Connection is secure"
 - Now you website is live on example.com
+
+
+
+![image](https://github.com/VarmaRahul/devops-projects/assets/66249367/a2280c6a-56fa-4558-9f49-b2ca828d631d)
