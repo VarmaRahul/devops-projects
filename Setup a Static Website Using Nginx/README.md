@@ -20,7 +20,7 @@ sudo cat /var/www/html/index.nginx-debian.html
 - rename the project to "hospital"
 ```
 cd /var/www/html
-git clone 
+git clone https://github.com/VarmaRahul/Hospital-Management-Html.git
 mv Hospital-Management-Html hospital
 chmod 666 hospital
 ```
