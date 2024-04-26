@@ -1,4 +1,4 @@
-### This requires following the static website config
+### The prerequisite is to setup a static website on a Nginx server
 - Create a new ubuntu server and execute the below commands
 ```
 sudo apt-get update && sudo apt-get -y upgrade
